@@ -42,7 +42,8 @@ const Wrapper = styled.header`
 `;
 
 const MenuEl = styled.p`
-padding-bottom: 2px;
+display: inline;
+padding-bottom: 3px;
 border-bottom: solid 2px ${(props) =>
   props.isCurrentPage ? '' : 'transparent'};
 &:hover {

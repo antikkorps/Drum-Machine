@@ -22,7 +22,7 @@ button:hover {
     color: ${(props) => props.theme.backgroundColor};
 }
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 h1 {
     font-size: 1.2rem;
 }
