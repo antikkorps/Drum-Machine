@@ -9,4 +9,4 @@ export default function About() {
   );
 }
 
-const Wrapper = styled.about``;
+const Wrapper = styled.div``;
