@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Footer() {
+export default function Footer({ isLight, handleToggleTheme }) {
   return (
     <Wrapper>
-      <h1>The Footer</h1>
+      <button onClick={handleToggleTheme}>
+        {' '}
+        Switch to {isLight ? 'dark' : 'light'} theme
+      </button>
     </Wrapper>
   );
 }
@@ -14,5 +17,5 @@ const Wrapper = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid;
+  background-color: ${(props) => props.theme.mainColor};
 `;

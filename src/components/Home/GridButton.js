@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function GridButton({ isPlayed = false, soundPlay, id }) {
+export default function GridButton({
+  isPlayed = false,
+  soundPlay,
+  id,
+  handleSampleChange,
+}) {
   return (
     <Wrapper isPlayed={isPlayed} onClick={soundPlay}>
       <label onClick={(e) => e.stopPropagation()} htmlFor={id}>
@@ -12,6 +17,7 @@ export default function GridButton({ isPlayed = false, soundPlay, id }) {
         htmlFor={id}
         id={id}
         type='file'
+        onChange={handleSampleChange}
       />
     </Wrapper>
   );

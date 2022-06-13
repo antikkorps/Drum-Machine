@@ -18,9 +18,9 @@ export default function Layout({ children }) {
     <ThemeProvider theme={isLight ? lightTheme : darkTheme}>
       <Wrapper>
         <GlobalStyle />
-        <Header isLight={isLight} handleToggleTheme={handleToggleTheme} />
+        <Header />
         <Main>{children}</Main>
-        <Footer />
+        <Footer isLight={isLight} handleToggleTheme={handleToggleTheme} />
       </Wrapper>
     </ThemeProvider>
   );
@@ -33,5 +33,5 @@ const Main = styled.div`
   width: 96%;
   max-width: 1246px;
   margin: auto;
-  margin-top: 2vh;
+  display: flex;
 `;

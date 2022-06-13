@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 
-export default function Header({ isLight, handleToggleTheme }) {
+export default function Header() {
   const location = useLocation();
 
   return (
@@ -17,10 +17,6 @@ export default function Header({ isLight, handleToggleTheme }) {
         </Link>
         <Outlet />
       </nav>
-      <button onClick={handleToggleTheme}>
-        {' '}
-        Switch to {isLight ? 'dark' : 'light'} theme
-      </button>
     </Wrapper>
   );
 }
@@ -31,17 +27,17 @@ const Wrapper = styled.header`
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
-  border-bottom: 1px solid;
   & a {
     text-decoration: none;
     color: inherit;
   }
   & a:first-child {
-    margin-right: 10px;
+    margin-right: 16px;
   }
 `;
 
 const MenuEl = styled.p`
+font-size: 18px;
 display: inline;
 padding-bottom: 3px;
 border-bottom: solid 2px ${(props) =>
